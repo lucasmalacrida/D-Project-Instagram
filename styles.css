@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -123,8 +127,8 @@ body {
 }
 
 #search-bar {
-    width: 213px;
-    height: 26px;
+    width: 215px;
+    height: 28px;
     background-color: #FAFAFA;
     border-style: solid;
     border-width: 1px;
@@ -229,7 +233,6 @@ body {
     margin-bottom: 24px;
 
     width: 614px;
-    height: 118px;
     background-color: #ffffff;
     border: #DBDBDB 1px solid;
     border-radius: 3px;
@@ -238,19 +241,28 @@ body {
 }
 
 .stories-overflow {
-    margin-top: 18px;
-    margin-left: 18px;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    padding: 18px 18px 14px;
+
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
+.stories-overflow::-webkit-scrollbar {
+    display: none;
+}
 
 .story {
     width: 66px;
     margin-right: 14px;
     justify-content: center;
     text-align: center;
+}
+
+.story:last-of-type {
+    margin-right: 0px;
 }
 
 .box-story-pic {
@@ -274,12 +286,13 @@ body {
 }
 .story h4 {
     margin-top: 1px;
+    padding: 2.5px 0px;
 }
 
 .post {
     margin-bottom: 60px;
 
-    width: 612px;
+    width: 614px;
     background-color: #ffffff;
     border: #DBDBDB 1px solid;
     border-radius: 3px;
@@ -473,12 +486,17 @@ body {
         margin-right: 16px;
     }
 
+    .stories-overflow {
+        padding-bottom: 18px;
+    }
+
     .stories {
         margin-top: 0px;
         margin-bottom: 0px;
         border: none;
         background-color: #FAFAFA;
     }
+
 
     #stories-arrow {
         display: none;

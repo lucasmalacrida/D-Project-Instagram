@@ -148,7 +148,9 @@ body {
     margin-top: 16px;
     margin-bottom: 16px;
     font-size: 22px;
-    letter-spacing: 22px;
+    width: 148px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-content {
